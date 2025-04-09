@@ -53,6 +53,10 @@ Notes 11/13/2024
 
 TODO: At some point add a mechanism for dealing with entries that are simply too big to store in a chunk, i.e.
 break it up into subchunks and then have some system for keeping track of the fragments of that chunk
+
+Notes 4/8/2025
+
+TODO: Speed up operations involving getting the size of the data in each chunk / entry through updating the chunk size as elements are inserted / removed.
 ]]
 
 local DataStoreService = game:GetService("DataStoreService")
