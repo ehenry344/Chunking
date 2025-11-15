@@ -235,6 +235,9 @@ function Chunking:_updateSavedContent(chunkId: number)
 
 	chunk._savedContent = content
 	chunk._savedContentSize = #HttpService:JSONEncode(content)
+	-- TODO: instead of JSONEncoding the entire content again (very expensive), should just
+	-- see if simple addition is a viable solution to this (adding on the size of the jsonencoded data)
+
 	-- need better savedcontentsize tracking
 
 	--TODO: give the virtualcontent table weak metatable keys so if keys store a reference they can get garbage collected
